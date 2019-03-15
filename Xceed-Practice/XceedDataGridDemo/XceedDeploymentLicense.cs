@@ -1,5 +1,5 @@
 
-namespace Xceed.Wpf.DataGrid.Samples
+namespace XceedDataGridDemo
 {
   public static class XceedDeploymentLicense
   {

@@ -13,6 +13,8 @@ namespace XceedDataGridDemo
 
         protected override void OnStartup(object obj, StartupEventArgs e)
         {
+            XceedDeploymentLicense.SetLicense();  // load Xceed license
+
             DisplayRootViewFor<DataGridViewModel>();
         }
     }
