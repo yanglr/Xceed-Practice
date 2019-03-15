@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace XceedDataGridDemo.ViewModels
 {
-    public class DataGridViewModel : Screen, INotifyPropertyChanged
+    public class DataGridViewModel : PropertyChangedBase, INotifyPropertyChanged
     {
         private string _firstText = "Hey";
 
