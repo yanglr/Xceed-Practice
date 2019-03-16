@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using Xceed.Wpf.DataGrid;
 using XceedDataGridDemo.Models;
 
@@ -61,6 +62,9 @@ namespace XceedDataGridDemo.ViewModels
                 FirstName = "Bravo",
                 LastName = "Yeung"
             });
+
+            SelectedPerson = People.FirstOrDefault(); // Select first by default
+
         }
         
 

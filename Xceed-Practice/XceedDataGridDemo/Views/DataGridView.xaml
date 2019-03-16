@@ -10,11 +10,13 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <!--<RowDefinition Height="*"></RowDefinition>-->
         </Grid.RowDefinitions>
 
 <!--<TextBlock Text="{Binding FirstText}"></TextBlock>-->
@@ -24,11 +26,11 @@
         </GroupBox>-->
         <!-- <ListBox ItemsSource="{Binding People}"></ListBox> -->
 
-        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="People" 
-                  SelectedItem="{Binding Path=SelectedPerson, Mode=OneWayToSource}" 
+        <ComboBox Grid.Row="0" Grid.Column="0" x:Name="People" 
+                  SelectedItem="{Binding Path=SelectedPerson, Mode=TwoWay}" 
                   DisplayMemberPath="FirstName" />
 
-        <TextBlock Grid.Row="0" Grid.Column="2" x:Name="Se1ectedPerson_LastName" />
+        <!--<TextBlock Grid.Row="1" Grid.Column="1" x:Name="Se1ectedPerson_LastName" />-->
 
     </Grid>
 </UserControl>
