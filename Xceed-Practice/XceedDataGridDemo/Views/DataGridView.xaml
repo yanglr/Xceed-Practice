@@ -9,10 +9,26 @@
              Width="720" Height="400">
 
     <Grid>
-        <TextBlock Text="{Binding FirstText}"></TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+<!--<TextBlock Text="{Binding FirstText}"></TextBlock>-->
 
         <!--<GroupBox Header="Xceed Demo">
             <TextBlock Text="{Binding FirstText}"></TextBlock>
         </GroupBox>-->
+        <!-- <ListBox ItemsSource="{Binding People}"></ListBox> -->
+
+        <ComboBox Grid.Row="0" Grid.Column="1" x:Name="People" 
+                  SelectedItem="{Binding Path=SelectedPerson, Mode=OneWayToSource}" 
+                  DisplayMemberPath="FirstName" />
+
+        <TextBlock Grid.Row="0" Grid.Column="2" x:Name="Se1ectedPerson_LastName" />
+
     </Grid>
 </UserControl>

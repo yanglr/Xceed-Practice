@@ -8,6 +8,8 @@
         mc:Ignorable="d"
         d:DataContext="{x:Type model:ShellViewModel}"
         Icon="./AppIcon.ico"
+        Background="White"
+        WindowStartupLocation="CenterScreen"
         Height="450" Width="800">
 
     <Grid>
