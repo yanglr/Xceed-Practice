@@ -4,13 +4,23 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:WpfDataGridDynamicColumns_MVVM.Views"
+             xmlns:behaviors="clr-namespace:WpfDataGridDynamicColumns_MVVM.behavoirs"
              xmlns:cal="http://www.caliburnproject.org"
-             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
              Width="720" Height="400">
 
     <Grid>
 
-        <TextBlock Text="{Binding FirstText}"></TextBlock>
+        <!--<TextBlock Text="{Binding FirstText}"></TextBlock>-->
+        <GroupBox x:Name="UsersGroupBox"
+                  Grid.Column="0"
+                  Header="User Role Assignment">
+            <DataGrid x:Name="DataGridUsers"
+                      ItemsSource="{Binding Datatable}"
+                      behaviors:DataGridColumnsBehavior.BindableColumns="{Binding ColumnCollection}"
+                      AutoGenerateColumns="False"
+                      EnableRowVirtualization="False"/>
+
+        </GroupBox>
 
     </Grid>
 </UserControl>
