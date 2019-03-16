@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XceedDataGridDemo", "XceedD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawWpfDataGrid", "RawWpfDataGrid\RawWpfDataGrid.csproj", "{06E8579C-B62A-402B-80FE-A103988EDD3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawWpfDataGridDynamicColDemoUsingDict", "RawWpfDataGridDynamicColDemoUsingDict\RawWpfDataGridDynamicColDemoUsingDict.csproj", "{50812569-69C1-4628-A51B-DE3A784F688B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataGridDynamicColumns-MVVM", "WpfDataGridDynamicColumns-MVVM\WpfDataGridDynamicColumns-MVVM.csproj", "{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{06E8579C-B62A-402B-80FE-A103988EDD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06E8579C-B62A-402B-80FE-A103988EDD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06E8579C-B62A-402B-80FE-A103988EDD3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50812569-69C1-4628-A51B-DE3A784F688B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50812569-69C1-4628-A51B-DE3A784F688B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50812569-69C1-4628-A51B-DE3A784F688B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50812569-69C1-4628-A51B-DE3A784F688B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
