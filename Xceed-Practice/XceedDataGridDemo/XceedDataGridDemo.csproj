@@ -117,7 +117,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Views\AppIcon.ico" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Views\DataGridView.xaml">
       <SubType>Designer</SubType>
