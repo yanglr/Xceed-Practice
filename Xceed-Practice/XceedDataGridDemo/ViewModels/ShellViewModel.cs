@@ -4,13 +4,12 @@ namespace XceedDataGridDemo.ViewModels
 {
     public class ShellViewModel : Conductor<IScreen>
     {
-        private const string WindowTitleDefault = "Xceed Demo";
-        private string _windowTitle = WindowTitleDefault;
         private DataGridViewModel _dataGridViewModel;
 
         public ShellViewModel()
         {
-            DisplayName = "Xceed Demo";
+            DisplayName = "Xceed Demo";  // Set Title for default window title, also can be set once in ShellView.xaml using "Title="
+
             DataGridViewModel = new DataGridViewModel();
         }
 
@@ -21,16 +20,6 @@ namespace XceedDataGridDemo.ViewModels
             {
                 _dataGridViewModel = value;
                 NotifyOfPropertyChange(() => DataGridViewModel);
-            }
-        }
-
-        public string WindowTitle
-        {
-            get { return _windowTitle; }
-            set
-            {
-                _windowTitle = value;
-                NotifyOfPropertyChange(() => WindowTitle);
             }
         }
 

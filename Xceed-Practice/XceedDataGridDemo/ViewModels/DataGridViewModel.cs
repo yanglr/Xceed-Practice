@@ -19,16 +19,6 @@ namespace XceedDataGridDemo.ViewModels
         public DataGridViewModel()
         {
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void INotifyPropertyChanged(string name)
-        {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(name));
-            }
-        }
         
 
     }

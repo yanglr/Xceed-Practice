@@ -7,7 +7,6 @@
         xmlns:model="clr-namespace:XceedDataGridDemo.ViewModels"
         mc:Ignorable="d"
         d:DataContext="{x:Type model:ShellViewModel}"
-        Title="{Binding WindowTitle}"
         Icon="./AppIcon.ico"
         Height="450" Width="800">
 
