@@ -28,7 +28,7 @@
 
         <ComboBox Grid.Row="0" Grid.Column="0" x:Name="People" 
                   SelectedItem="{Binding Path=SelectedPerson, Mode=TwoWay}" 
-                  DisplayMemberPath="FirstName" />
+                  DisplayMemberPath="FullName" />
 
         <!--<TextBlock Grid.Row="1" Grid.Column="1" x:Name="Se1ectedPerson_LastName" />-->
 
