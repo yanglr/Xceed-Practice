@@ -5,8 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:XceedDataGridDemo.Views"
              xmlns:cal="http://www.caliburnproject.org"
-             Width="400" Height="400">
+             xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
+             Width="720" Height="400">
+
     <Grid>
+        <TextBlock Text="{Binding FirstText}"></TextBlock>
+
+        <!--<GroupBox Header="Xceed Demo">
             <TextBlock Text="{Binding FirstText}"></TextBlock>
+        </GroupBox>-->
     </Grid>
 </UserControl>

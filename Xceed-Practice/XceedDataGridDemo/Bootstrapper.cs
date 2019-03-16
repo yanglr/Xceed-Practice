@@ -15,7 +15,7 @@ namespace XceedDataGridDemo
         {
             XceedDeploymentLicense.SetLicense();  // load Xceed license
 
-            DisplayRootViewFor<DataGridViewModel>();
+            DisplayRootViewFor<ShellViewModel>();
         }
     }
 }

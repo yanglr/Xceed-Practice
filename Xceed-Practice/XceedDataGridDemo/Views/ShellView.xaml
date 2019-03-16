@@ -1,0 +1,16 @@
+﻿<Window x:Class="XceedDataGridDemo.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XceedDataGridDemo.Views"
+        xmlns:cal="http://www.caliburnproject.org"
+        mc:Ignorable="d"
+        d:DataContext="{x:Type model:ShellViewModel}"
+        Title="{Binding WindowTitle}"
+        Height="450" Width="800">
+
+    <Grid>
+        <ContentControl cal:View.Model="{Binding DataGridViewModel}" x:Name="ActiveItem"></ContentControl>
+    </Grid>
+</Window>

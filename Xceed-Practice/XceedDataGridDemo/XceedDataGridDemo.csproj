@@ -76,8 +76,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\DataGridViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\DataGridView.xaml.cs">
       <DependentUpon>DataGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
     <Compile Include="XceedDeploymentLicense.cs" />
     <Compile Include="App.xaml.cs">
@@ -116,6 +120,10 @@
   <ItemGroup />
   <ItemGroup>
     <Page Include="Views\DataGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ShellView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
