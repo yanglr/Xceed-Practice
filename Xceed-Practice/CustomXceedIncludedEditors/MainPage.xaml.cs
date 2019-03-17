@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Data;
 
 namespace CustomXceedIncludedEditors
@@ -9,11 +8,7 @@ namespace CustomXceedIncludedEditors
   {
     private static DataTable RandomDataTable;
     private static Random Randomizer = new Random();
-
     private static List<string> DepartmentsList;
-
-    private const string Consonnants = "bcdfgjklmnprstv";
-    private const string Vowels = "aeiou";
 
     private static bool GetRandomBool()
     {
