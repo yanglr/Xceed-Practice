@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Windows;
 
-namespace CustomXceedIncludedEditors
+namespace WpfWithOnlyXceed_DynamicColumns
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

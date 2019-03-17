@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CustomXceedIncludedEditors
+namespace WpfWithOnlyXceed_DynamicColumns
 {
     public class UserModel
     {

@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawWpfDataGridDynamicColDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataGridDynamicColumns-MVVM", "WpfDataGridDynamicColumns-MVVM\WpfDataGridDynamicColumns-MVVM.csproj", "{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWithOnlyXceed_DynamicColumns", "WpfWithOnlyXceed-DynamicColumns\WpfWithOnlyXceed_DynamicColumns.csproj", "{54021A20-2425-4F62-9BD9-5D2C32B48A75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomXceedIncludedEditors", "WpfWithOnlyXceed-DynamicColumns\CustomXceedIncludedEditors.csproj", "{54021A20-2425-4F62-9BD9-5D2C32B48A75}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDynamicDataGrid_MVVM", "WpfDynamicDataGrid_MVVM\WpfDynamicDataGrid_MVVM.csproj", "{3D907C05-CA72-445B-829A-F931AA83BB9A}"
 EndProject
