@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54021A20-2425-4F62-9BD9-5D2C32B48A75}</ProjectGuid>
+    <ProjectGuid>{238976A2-8D4A-4E26-B225-6D78C6E3E35E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfWithOnlyXceed_DynamicColumns</RootNamespace>
-    <AssemblyName>WpfWithOnlyXceed-DynamicColumns</AssemblyName>
+    <RootNamespace>CustomXceedIncludedEditors</RootNamespace>
+    <AssemblyName>CustomXceedIncludedEditors</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -62,9 +62,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\InvariantAbbreviatedDateToStringConverter.cs" />
+    <Compile Include="DateTimeEditors.xaml.cs">
+      <DependentUpon>DateTimeEditors.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPageParams.cs" />
+    <Compile Include="MaskedTextBoxEditors.xaml.cs">
+      <DependentUpon>MaskedTextBoxEditors.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserModel.cs" />
     <Compile Include="XceedDeploymentLicense.cs" />
-    <Page Include="MainWindow.xaml">
+    <Page Include="AuxiliaryResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ComboBoxEditors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DateTimeEditors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -72,10 +95,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="MaskedTextBoxEditors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NumericTextBoxEditors.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfWithOnlyXceed_DynamicColumns.Properties
+namespace CustomXceedIncludedEditors.Properties
 {
 
 

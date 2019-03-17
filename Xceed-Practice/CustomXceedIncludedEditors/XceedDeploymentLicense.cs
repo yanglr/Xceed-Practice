@@ -1,5 +1,5 @@
 ﻿
-namespace WpfWithOnlyXceed_DynamicColumns
+namespace CustomXceedIncludedEditors
 {
     public class XceedDeploymentLicense
     {
