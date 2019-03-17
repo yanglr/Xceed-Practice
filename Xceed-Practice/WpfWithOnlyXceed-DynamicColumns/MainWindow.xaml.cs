@@ -1,5 +1,4 @@
-﻿using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Data;
 using System.Windows;
 using Xceed.Wpf.DataGrid;
@@ -17,17 +16,17 @@ namespace CustomXceedIncludedEditors
 
             InitializeComponent();
 
+            InitColumnHeaders();
+            PopulateTable();
             myGrid.ItemsSource = new DataGridCollectionView(RandomDataTable.DefaultView);
+        }
 
-            RandomDataTable.Columns.Add(new DataColumn("Included", typeof(bool)));
-            RandomDataTable.Columns.Add(new DataColumn("Name", typeof(string)));
-
-            RandomDataTable.Columns.Add(new DataColumn("Price", typeof(double)));
-            RandomDataTable.Columns.Add(new DataColumn("Quantity", typeof(int)));
-
+        private void PopulateTable()
+        {
             for (int i = 0; i < 8; i++)
             {
-                object[] values = new object[] {
+                object[] values = new object[]
+                {
                     true,
                     "Bruce",
                     20.5,
@@ -36,7 +35,14 @@ namespace CustomXceedIncludedEditors
 
                 RandomDataTable.Rows.Add(values);
             }
+        }
 
+        private void InitColumnHeaders()
+        {
+            RandomDataTable.Columns.Add(new DataColumn("Included", typeof(bool)));
+            RandomDataTable.Columns.Add(new DataColumn("Name", typeof(string)));
+            RandomDataTable.Columns.Add(new DataColumn("Price", typeof(double)));
+            RandomDataTable.Columns.Add(new DataColumn("Quantity", typeof(int)));
         }
 
         private DataTable _randomDataTable = new DataTable();

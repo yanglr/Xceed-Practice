@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CustomXceedIncludedEditors"
         xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Xceed Dynamic Columns - Demo" Height="450" Width="800">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -21,7 +21,6 @@
 
             <!-- Add an Xceed DataGridControl. -->
             <xcdg:DataGridControl x:Name="myGrid"
-                                  ItemsSource="{Binding Source={StaticResource cvsRandomData}}"
                                   EditTriggers="BeginEditCommand,ActivationGesture,ClickOnCurrentCell"
                                   CellEditorDisplayConditions="MouseOverCell"
                                   ItemScrollingBehavior="Immediate">
