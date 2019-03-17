@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.Data;
 using System.Windows;
+using Xceed.Wpf.DataGrid;
 
 namespace CustomXceedIncludedEditors
 {
@@ -15,6 +16,8 @@ namespace CustomXceedIncludedEditors
             XceedDeploymentLicense.SetLicense();  // load Xceed license
 
             InitializeComponent();
+
+            myGrid.ItemsSource = new DataGridCollectionView(RandomDataTable.DefaultView);
 
             RandomDataTable.Columns.Add(new DataColumn("Included", typeof(bool)));
             RandomDataTable.Columns.Add(new DataColumn("Name", typeof(string)));
@@ -48,17 +51,17 @@ namespace CustomXceedIncludedEditors
             }
         }
 
+        private DataTable _randomData = new DataTable();
 
-        //private ObservableCollection<UserModel> _userCollection = new ObservableCollection<UserModel>();
-        //public ObservableCollection<UserModel> UserCollection
-        //{
-        //    get { return _userCollection; }
-        //    set
-        //    {
-        //        _userCollection = value;
-        //        NotifyPropertyChanged("UserCollection");
-        //    }
-        //}
+        public DataTable RandomData
+        {
+            get { return RandomDataTable; }
+            set
+            {
+                RandomData = value;
+                NotifyPropertyChanged("RandomData");
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         // Pre .NET 4.5 implimentation

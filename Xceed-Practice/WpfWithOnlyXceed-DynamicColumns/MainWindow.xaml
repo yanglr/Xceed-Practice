@@ -20,7 +20,7 @@
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
 
             <!-- Add an Xceed DataGridControl. -->
-            <xcdg:DataGridControl x:Name="grid"
+            <xcdg:DataGridControl x:Name="myGrid"
                                   ItemsSource="{Binding Source={StaticResource cvsRandomData}}"
                                   EditTriggers="BeginEditCommand,ActivationGesture,ClickOnCurrentCell"
                                   CellEditorDisplayConditions="MouseOverCell"
