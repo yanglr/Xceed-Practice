@@ -10,7 +10,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
             <StackPanel Orientation="Horizontal">
                 <TextBlock>UserId:</TextBlock>
                 <xcdg:CheckBox IsChecked="True"/>
