@@ -9,9 +9,6 @@
          <ResourceDictionary.MergedDictionaries>
             <ResourceDictionary Source="AuxiliaryResources.xaml" />            
             <ResourceDictionary Source="MaskedTextBoxEditors.xaml" />
-            <ResourceDictionary Source="NumericTextBoxEditors.xaml" />
-            <ResourceDictionary Source="DateTimeEditors.xaml" />
-            <ResourceDictionary Source="ComboBoxEditors.xaml" />
          </ResourceDictionary.MergedDictionaries>
 
          <xcdg:DataGridCollectionViewSource x:Key="cvsRandomData"
@@ -58,8 +55,8 @@
                             EditTriggers="BeginEditCommand,ActivationGesture,ClickOnCurrentCell"
                             CellEditorDisplayConditions="MouseOverCell"
                             ItemScrollingBehavior="Immediate">
-          <xcdg:DataGridControl.View>
 
+          <xcdg:DataGridControl.View>
               <xcdg:TableflowView Theme="{DynamicResource defaultTheme}" />
           </xcdg:DataGridControl.View>
 
