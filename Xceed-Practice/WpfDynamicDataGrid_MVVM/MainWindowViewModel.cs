@@ -144,7 +144,7 @@ namespace WpfDynamicDataGrid_MVVM
         /// </summary>
         /// <param name="id">Id of the person</param>
         /// <param name="name">Name of the person</param>
-        /// <param name="emailId">EmailId of the person</param>
+        /// <param name="email">EmailId of the person</param>
         /// <returns></returns>
         private dynamic AddPersonToList(dynamic id, dynamic isMale, dynamic name,dynamic email)
         {
@@ -153,7 +153,7 @@ namespace WpfDynamicDataGrid_MVVM
             p1.Name = name;
             p1.IsMale = isMale;
 
-            p1.EmailId = email;  // Only etract the info we are interested
+            p1.Email = email;  // Only etract the info we are interested
 
             listOfPerson.Add(p1);
             return p1;
