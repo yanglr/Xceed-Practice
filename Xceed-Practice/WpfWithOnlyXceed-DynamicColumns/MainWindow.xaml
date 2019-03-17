@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:CustomXceedIncludedEditors"
         xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
         mc:Ignorable="d"
+        Icon="./AppIcon.ico"
         Title="Xceed Dynamic Columns - Demo" Height="450" Width="800">
 
     <Window.Resources>
