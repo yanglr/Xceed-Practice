@@ -70,7 +70,7 @@ namespace CustomXceedIncludedEditors
 
         private void InitColumnHeaders()
         {
-            RandomDataTable.Columns.Add(new DataColumn("Included", typeof(bool)));
+            RandomDataTable.Columns.Add(new DataColumn("Gendar", typeof(bool)));
             RandomDataTable.Columns.Add(new DataColumn("Name", typeof(string)));
             RandomDataTable.Columns.Add(new DataColumn("Score", typeof(double)));
             RandomDataTable.Columns.Add(new DataColumn("Win Times", typeof(int)));

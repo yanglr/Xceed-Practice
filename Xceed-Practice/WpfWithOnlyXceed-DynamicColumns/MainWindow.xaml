@@ -31,7 +31,7 @@
 
                 <xcdg:DataGridControl.Columns>
                     <!-- Using the default CellEditor for a Boolean value: Xceed.Wpf.Controls.CheckBox. -->
-                    <xcdg:Column FieldName="Included"
+                    <xcdg:Column FieldName="Gendar"
                                  Title="IsMale"
                                  Width="75"
                                  Visible="True" />
