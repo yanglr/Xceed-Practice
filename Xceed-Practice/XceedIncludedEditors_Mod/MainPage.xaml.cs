@@ -1,30 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.Collections.Specialized;
-using Xceed.Wpf.DataGrid.Views;
 using System.Data;
 using System.Net;
-using Xceed.Wpf.Controls;
 
 namespace Xceed.Wpf.DataGrid.Samples.IncludedEditors
 {
-  public partial class MainPage : System.Windows.Controls.Page
+    public partial class MainPage : System.Windows.Controls.Page
   {
     private static DataTable RandomDataTable;
     private static Random Randomizer = new Random();
 
     private static List<string> DepartmentsList;
-
 
     private const string Consonnants = "bcdfgjklmnprstv";
     private const string Vowels = "aeiou";

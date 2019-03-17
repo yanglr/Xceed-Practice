@@ -19,7 +19,7 @@ namespace Xceed.Wpf.DataGrid.Samples.IncludedEditors
 
     #region FreeTextColumnsVisible
 
-    private bool m_freeTextColumnsVisible = true;
+    private bool m_freeTextColumnsVisible = false;
 
     public bool FreeTextColumnsVisible
     {
@@ -67,7 +67,7 @@ namespace Xceed.Wpf.DataGrid.Samples.IncludedEditors
 
     #region DateTimeColumnsVisible
 
-    private bool m_dateTimeColumnsVisible = true;
+    private bool m_dateTimeColumnsVisible = false;
 
     public bool DateTimeColumnsVisible
     {
@@ -91,7 +91,7 @@ namespace Xceed.Wpf.DataGrid.Samples.IncludedEditors
 
     #region NumericColumnsVisible
 
-    private bool m_numericColumnsVisible = true;
+    private bool m_numericColumnsVisible = false;
 
     public bool NumericColumnsVisible
     {
@@ -115,7 +115,7 @@ namespace Xceed.Wpf.DataGrid.Samples.IncludedEditors
 
     #region ComboBoxColumnsVisible
 
-    private bool m_comboBoxColumnsVisible = true;
+    private bool m_comboBoxColumnsVisible = false;
 
     public bool ComboBoxColumnsVisible
     {
