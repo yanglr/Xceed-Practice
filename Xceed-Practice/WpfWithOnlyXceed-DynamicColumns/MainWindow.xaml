@@ -12,7 +12,7 @@
         <ResourceDictionary>
 
             <xcdg:DataGridCollectionViewSource x:Key="cvsRandomData"
-                 Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=local:MainWindow},Path=RandomData}" />
+                 Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=local:MainWindow}, Path=RandomData}" />
         </ResourceDictionary>
     </Window.Resources>
 
@@ -32,12 +32,12 @@
                 <xcdg:DataGridControl.Columns>
                     <!-- Using the default CellEditor for a Boolean value: Xceed.Wpf.Controls.CheckBox. -->
                     <xcdg:Column FieldName="Included"
-                                 Title="CheckBox"
+                                 Title="IsMale"
                                  Width="75"
                                  Visible="True" />
 
-                    <xcdg:Column FieldName="Price"
-                                 Title="Price"
+                    <xcdg:Column FieldName="Score"
+                                 Title="Score"
                                  Width="125"
                                  Visible="True" />
                 </xcdg:DataGridControl.Columns>

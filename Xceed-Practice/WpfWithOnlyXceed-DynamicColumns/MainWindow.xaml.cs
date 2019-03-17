@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Windows;
 using Xceed.Wpf.DataGrid;
@@ -21,16 +23,45 @@ namespace CustomXceedIncludedEditors
             myGrid.ItemsSource = new DataGridCollectionView(RandomDataTable.DefaultView);
         }
 
+        private DataTable _randomData = new DataTable();
+        private static readonly Random _random = new Random();
+
+        private bool GetRandomBool()
+        {
+            return (_random.Next(0, 2) == 1);
+        }
+
+        private string GetRandomName()
+        {
+            var names = new List<string>();
+            names.Add("Casey");
+            names.Add("Darcy");
+            names.Add("Max");
+            names.Add("Lee");
+
+            int rIdx = _random.Next(names.Count);
+            return names[rIdx];
+        }
+
+        private int GetRandomInteger()
+        {
+            return _random.Next(0, 13);
+        }
+
+        private static double GetRandomDouble(double multiplier)
+        {
+            return Math.Round((_random.NextDouble() * multiplier), 2);
+        }
+
         private void PopulateTable()
         {
             for (int i = 0; i < 8; i++)
             {
-                object[] values = new object[]
-                {
-                    true,
-                    "Bruce",
-                    20.5,
-                    66
+                object[] values = new object[] {
+                    GetRandomBool(),
+                    GetRandomName(),
+                    GetRandomDouble(100),
+                    GetRandomInteger()
                 };
 
                 RandomDataTable.Rows.Add(values);
@@ -41,8 +72,8 @@ namespace CustomXceedIncludedEditors
         {
             RandomDataTable.Columns.Add(new DataColumn("Included", typeof(bool)));
             RandomDataTable.Columns.Add(new DataColumn("Name", typeof(string)));
-            RandomDataTable.Columns.Add(new DataColumn("Price", typeof(double)));
-            RandomDataTable.Columns.Add(new DataColumn("Quantity", typeof(int)));
+            RandomDataTable.Columns.Add(new DataColumn("Score", typeof(double)));
+            RandomDataTable.Columns.Add(new DataColumn("Win Times", typeof(int)));
         }
 
         private DataTable _randomDataTable = new DataTable();
@@ -56,8 +87,6 @@ namespace CustomXceedIncludedEditors
                 NotifyPropertyChanged("RandomDataTable");
             }
         }
-
-        private DataTable _randomData = new DataTable();
 
         public DataTable RandomData
         {
