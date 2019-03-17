@@ -11,6 +11,10 @@
         WindowStartupLocation="CenterScreen"
         Height="450" Width="800">
 
+    <!--<Window.DataContext>
+        <model:ShellViewModel/>
+    </Window.DataContext>-->
+
     <Grid>
         <ContentControl cal:View.Model="{Binding DataGridViewModel}" x:Name="ActiveItem"></ContentControl>
     </Grid>

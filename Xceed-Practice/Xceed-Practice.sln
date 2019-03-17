@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RawWpfDataGridDynamicColDem
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDataGridDynamicColumns-MVVM", "WpfDataGridDynamicColumns-MVVM\WpfDataGridDynamicColumns-MVVM.csproj", "{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWithOnlyXceed-DynamicColumns", "WpfWithOnlyXceed-DynamicColumns\WpfWithOnlyXceed-DynamicColumns.csproj", "{54021A20-2425-4F62-9BD9-5D2C32B48A75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2479AA6-4CAC-4EBD-A5D6-DD52018B72C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54021A20-2425-4F62-9BD9-5D2C32B48A75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54021A20-2425-4F62-9BD9-5D2C32B48A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54021A20-2425-4F62-9BD9-5D2C32B48A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54021A20-2425-4F62-9BD9-5D2C32B48A75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
