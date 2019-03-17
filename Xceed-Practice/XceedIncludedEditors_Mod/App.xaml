@@ -1,17 +1,4 @@
-﻿<!--
-  Xceed DataGrid for WPF - SAMPLE CODE - Included Editors Sample Application
-  Copyright (c) 2007-2019 Xceed Software Inc.
-
-  [App.xaml]
-
-  This is the Application class of the Included Editors sample.
-
-  This file is part of the Xceed DataGrid for WPF product. The use 
-  and distribution of this Sample Code is subject to the terms 
-  and conditions referring to "Sample Code" that are specified in 
-  the XCEED SOFTWARE LICENSE AGREEMENT accompanying this product.
--->
-
+﻿
 <Application x:Class="Xceed.Wpf.DataGrid.Samples.IncludedEditors.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
