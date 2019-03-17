@@ -5,20 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CustomXceedIncludedEditors"
         xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.Resources>
+        <ResourceDictionary>
+
+            <xcdg:DataGridCollectionViewSource x:Key="cvsRandomData"
+                 Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=local:MainWindow},Path=RandomData}" />
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-
         <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock>UserId:</TextBlock>
-                <xcdg:CheckBox IsChecked="True"/>
-            </StackPanel>
 
-            <DataGrid ItemsSource="{Binding UserCollection}" 
-                      CanUserAddRows="false">
-            </DataGrid>
+            <!-- Add an Xceed DataGridControl. -->
+            <xcdg:DataGridControl x:Name="grid"
+                                  ItemsSource="{Binding Source={StaticResource cvsRandomData}}"
+                                  EditTriggers="BeginEditCommand,ActivationGesture,ClickOnCurrentCell"
+                                  CellEditorDisplayConditions="MouseOverCell"
+                                  ItemScrollingBehavior="Immediate">
+
+                <xcdg:DataGridControl.View>
+                    <xcdg:TableflowView Theme="{DynamicResource defaultTheme}" />
+                </xcdg:DataGridControl.View>
+
+                <xcdg:DataGridControl.Columns>
+                    <!-- Using the default CellEditor for a Boolean value: Xceed.Wpf.Controls.CheckBox. -->
+                    <xcdg:Column FieldName="Included"
+                                 Title="CheckBox"
+                                 Width="75"
+                                 Visible="True" />
+
+                    <xcdg:Column FieldName="Price"
+                                 Title="Price"
+                                 Width="125"
+                                 Visible="True" />
+                </xcdg:DataGridControl.Columns>
+
+            </xcdg:DataGridControl>
 
         </StackPanel>
 
