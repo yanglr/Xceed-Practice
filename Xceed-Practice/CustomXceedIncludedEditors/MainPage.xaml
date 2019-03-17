@@ -38,30 +38,15 @@
                      <CheckBox Margin="{StaticResource configItemMargin}"
                                Content="Masked columns"
                                IsChecked="{Binding Source={x:Static local:MainPageParams.Singleton}, Path=MaskedTextColumnsVisible}" />
-
-                     <CheckBox Margin="{StaticResource configItemMargin}"
-                               Content="DateTime columns"
-                               IsChecked="{Binding Source={x:Static local:MainPageParams.Singleton},Path=DateTimeColumnsVisible}" />
-
-                     <CheckBox Margin="{StaticResource configItemMargin}"
-                               Content="Numeric columns"
-                               IsChecked="{Binding Source={x:Static local:MainPageParams.Singleton},Path=NumericColumnsVisible}" />
-                  </StackPanel>
+                        </StackPanel>
 
                   <StackPanel Orientation="Vertical"
                               Margin="10,0,0,0">
-                     <CheckBox Margin="{StaticResource configItemMargin}"
-                               Content="ComboBox column"
-                               IsChecked="{Binding Source={x:Static local:MainPageParams.Singleton},Path=ComboBoxColumnsVisible}" />
 
-                     <CheckBox Margin="{StaticResource configItemMargin}"
+                            <CheckBox Margin="{StaticResource configItemMargin}"
                                Content="CheckBox column"
                                IsChecked="{Binding Source={x:Static local:MainPageParams.Singleton},Path=CheckBoxColumnsVisible}" />
-
-                     <CheckBox Margin="{StaticResource configItemMargin}"
-                               Content="FreeText column"
-                               IsChecked="{Binding Source={x:Static local:MainPageParams.Singleton},Path=FreeTextColumnsVisible}" />
-                  </StackPanel>
+                        </StackPanel>
                </StackPanel>
             </GroupBox>
          </StackPanel>
