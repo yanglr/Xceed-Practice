@@ -12,7 +12,7 @@
     <Window.Resources>
         <ResourceDictionary>
 
-            <xcdg:DataGridCollectionViewSource x:Key="cvsRandomData"
+            <xcdg:DataGridCollectionViewSource x:Key="RandomDataView"
                  Source="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=local:MainWindow}, Path=RandomData}" />
         </ResourceDictionary>
     </Window.Resources>
