@@ -7,6 +7,12 @@
              xmlns:cal="http://www.caliburnproject.org"
              xmlns:xcdg="http://schemas.xceed.com/wpf/xaml/datagrid"
              Width="720" Height="400">
+    <UserControl.Resources>
+        <ResourceDictionary>
+
+            <xcdg:DataGridCollectionViewSource x:Key="RandomDataView" Source="{Binding RandomDataTable, Mode=TwoWay}" /> <!-- Must use TwoWay here! -->
+        </ResourceDictionary>
+    </UserControl.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -16,7 +22,7 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="20"></RowDefinition>
-            <!--<RowDefinition Height="*"></RowDefinition>-->
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
 <!--<TextBlock Text="{Binding FirstText}"></TextBlock>-->
@@ -28,9 +34,57 @@
 
         <ComboBox Grid.Row="0" Grid.Column="0" x:Name="People" 
                   SelectedItem="{Binding Path=SelectedPerson, Mode=TwoWay}" 
-                  DisplayMemberPath="FullName" />
+                  DisplayMemberPath="FullName" />             <!-- Must use TwoWay here! -->
 
-        <!--<TextBlock Grid.Row="1" Grid.Column="1" x:Name="Se1ectedPerson_LastName" />-->
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Left">
+            <xcdg:DataGridControl x:Name="MyGrid"
+                                  ItemsSource="{Binding Source={StaticResource RandomDataView}}"
+                                  EditTriggers="BeginEditCommand, ActivationGesture, ClickOnCurrentCell"
+                                  CellEditorDisplayConditions="MouseOverCell"
+                                  ItemScrollingBehavior="Immediate"
+                                  SelectionUnit="Cell" AutoCreateColumns="True" AllowDrop="False" AllowDrag="False" >
+
+                <!-- Hide default Xceed watermark above table. -->
+                <xcdg:DataGridControl.View>
+                    <xcdg:TableflowView UseDefaultHeadersFooters="False">
+                        <xcdg:TableflowView.FixedHeaders>
+                            <DataTemplate>
+                                <xcdg:ColumnManagerRow />
+                            </DataTemplate>
+                        </xcdg:TableflowView.FixedHeaders>
+                    </xcdg:TableflowView>
+                </xcdg:DataGridControl.View>
+
+                <xcdg:DataGridControl.Resources>
+                    <Style TargetType="{x:Type xcdg:DataCell}">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource self}, Path=ParentColumn.FieldName}" Value="IsMale">  <!-- Only enable Checkbox column be edited -->
+                                <Setter Property="ReadOnly" Value="False" />
+                                <Setter Property="IsEnabled" Value="True" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style TargetType="{x:Type xcdg:ColumnManagerCell}">
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ContentControl">
+                                    <TextBlock Text="{TemplateBinding ContentControl.Content}"
+                                                       TextAlignment="Center"
+                                                       HorizontalAlignment="Center"
+                                                       VerticalAlignment="Center" />
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+
+                </xcdg:DataGridControl.Resources>
+
+            </xcdg:DataGridControl>
+        </StackPanel>
 
     </Grid>
 </UserControl>

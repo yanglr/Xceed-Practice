@@ -5,7 +5,7 @@ using System.Data;
 using System.Windows;
 using Xceed.Wpf.DataGrid;
 
-namespace CustomXceedIncludedEditors
+namespace WpfWithOnlyXceed_DynamicColumns
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -20,7 +20,7 @@ namespace CustomXceedIncludedEditors
 
             InitColumnHeaders();
             PopulateTable();
-            myGrid.ItemsSource = new DataGridCollectionView(RandomDataTable.DefaultView);
+            MyGrid.ItemsSource = new DataGridCollectionView(RandomDataTable.DefaultView);
         }
 
         private DataTable _randomData = new DataTable();
@@ -70,7 +70,7 @@ namespace CustomXceedIncludedEditors
 
         private void InitColumnHeaders()
         {
-            RandomDataTable.Columns.Add(new DataColumn("Gendar", typeof(bool)));
+            RandomDataTable.Columns.Add(new DataColumn("Gender", typeof(bool)));
             RandomDataTable.Columns.Add(new DataColumn("Name", typeof(string)));
             RandomDataTable.Columns.Add(new DataColumn("Score", typeof(double)));
             RandomDataTable.Columns.Add(new DataColumn("Win Times", typeof(int)));
